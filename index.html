@@ -3,3 +3,82 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <title>CSS Basics</title>
+  <nav id="navbar">
+    <header>
+    <h1>CSS Basics<h1>
+
+    <ul>
+      <li><a href="#fonts-and-text">Fonts and text</a></li>
+      <li><a href="#selectors">Selectors</a></li>
+      <li><a href="#coloring">Coloring</a></li>
+      <li><a href="#about-boxes">About boxes</a></li>
+      <li><a href="#overflow">Overflow</a></li>
+    </ul>   
+    </header>
+  </nav>
+
+<main id="main-doc">
+  <section class="main-section" id="fonts-and-text">
+    <header>Fonts and text</header>
+    <ul>
+      <li>color [设置文字的颜色]</li>
+      <li>font-size [设置文字的大小]</li>
+      <li>font-family [设置文字的字体]</li>
+      <li>font-style [设置字体是否倾斜]normal（标准） italic（斜体字体样式） oblique（倾斜字体样式）</li>
+      <li>font-weight [设置文字是否加粗]normal（标准 400） bold（粗体字体 700）bolder（跟粗的字体） lighter（更细的字体）</li>
+      <li>line-height [设置文字的行高]</li>
+      <li>text-decoration [设置文字的下划线]none（默认值）underline（文本下划线）overline（文本上划线）line-through（文本删除线）</li>
+      <li>text-indent [设置文字首行缩进]text-indent:24px; 设置文字首行缩进24px, text-indent:2em 缩进2个字</li>
+      <li>text-align [设置文字水平对齐方式]left（排列在左侧，默认值）right（排列在右边） center（排列在中间）justify（实现两端对齐文本效果)</li>
+    </ul>
+  </section>
+
+   <section class="main-section" id="selectors">
+    <header>Selectors</header>
+    <ul>
+      <li>Element selector (a tag or type selector)</li>
+      <li>ID selector</li>
+      <li>Class selector</li>
+      <li>Attribute selector</li>
+      <li>Pseudo-class selector</li>
+    </ul>
+  </section>
+
+   <section class="main-section" id="coloring">
+    <header>Coloring</header>
+    <ul>
+      <li>Hexadecimal colors</li>
+      <li>Hexadecimal colors with transparency</li>
+      <li>RGB colors</li>
+      <li>RGBA colors</li>
+      <li>HSL colors</li>
+      <li>HSLA colors</li>
+      <li>Predefined/Cross-browser color names</li>
+    </ul>
+  </section>
+
+   <section class="main-section" id="about-boxes">
+    <header>About boxes</header>
+    <ul>
+      <li>padding [盒子内的内容和边框之间的间距] the space around the content. In the example below, it is the space around the paragraph text.</li>
+      <li>border [盒子的边框] the solid line that is just outside the padding.</li>
+      <li>margin [盒子与盒子之间的间距] the space around the outside of the border.</li>
+      (border)、(padding)、(margin)。
+    </ul>
+  </section>
+
+   <section class="main-section" id="overflow">
+    <header>Overflow</header>
+    <ul>
+      <li>visible 默认值。内容不会被修剪，会呈现在元素框之外。</li>
+      <li>hidden 内容会被修剪，并且其余内容是不可见的，此属性还有清除浮动、清除margin-top塌陷的功能。</li>
+      <li>scroll 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
+      <li>auto 如果内容超过父元素尺寸时，则浏览器会显示滚动条以便查看其余的内容。</li>
+      <li>inherit 规定应该从父元素继承 overflow 属性的值。</li>
+    </ul>
+  </section>
+</main>
+
+
+</HTML>
