@@ -9,14 +9,14 @@
 
 <body>
   <nav id="navbar">
-    <header>
     <h1>CSS Basics</h1>
+    <header>
     <ul class="contents">
-      <li><a class="nav-link" href="#fonts_and_text">Fonts and text</a></li>
-      <li><a class="nav-link" href="#selectors">Selectors</a></li>
-      <li><a class="nav-link" href="#coloring">Coloring</a></li>
-      <li><a class="nav-link" href="#about_boxes">About boxes</a></li>
-      <li><a class="nav-link" href="#overflow">Overflow</a></li>
+      <li id="contents"><a class="nav-link" href="#fonts_and_text">Fonts and text</a></li>
+      <li id="contents"><a class="nav-link" href="#selectors">Selectors</a></li>
+      <li id="contents"><a class="nav-link" href="#coloring">Coloring</a></li>
+      <li id="contents"><a class="nav-link" href="#about_boxes">About boxes</a></li>
+      <li id="contents"><a class="nav-link" href="#overflow">Overflow</a></li>
     </ul>   
     </header>
   </nav>
@@ -29,7 +29,7 @@
         <li>font-size [设置文字的大小]</li>
         <li>font-family [设置文字的字体]</li>
         <li>font-style [设置字体是否倾斜]normal（标准） italic（斜体字体样式） oblique（倾斜字体样式）</li>
-        <li>font-weight [设置文字是否加粗]normal（标准 400） bold（粗体字体 700）bolder（跟粗的字体） lighter（更细的字体）</li>
+        <li>font-weight [设置文字是否加粗]normal（标准 400） bold（粗体字体 700</li>
         <li>line-height [设置文字的行高]</li>
         <li>text-decoration [设置文字的下划线]none（默认值）underline（文本下划线）overline（文本上划线）line-through（文本删除线）</li>
         <li>text-indent [设置文字首行缩进]text-indent:24px; 设置文字首行缩进24px, text-indent:2em 缩进2个字</li>
@@ -54,15 +54,15 @@
         <li>Hexadecimal colors</li>
         <p>A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color. All values must be between 00 and FF.</p>
         <p>For example, the #0000ff value is rendered as blue, because the blue component is set to its highest value (ff) and the others are set to 00.</p>
-        <code>
+        <pre class="code"><code>
             #p1 {background-color: #ff0000;}   /* red */
             #p2 {background-color: #00ff00;}   /* green */
-            #p3 {background-color: #0000ff;}   /* blue */</code>
+            #p3 {background-color: #0000ff;}   /* blue */</code></pre>
         <li>Hexadecimal colors with transparency</li>
         <p>A hexadecimal color is specified with: #RRGGBB. To add transparency, add two additional digits between 00 and FF.</p>
-        <code>#p1a {background-color: #ff000080;}   /* red transparency */
+        <pre class="code"><code>#p1a {background-color: #ff000080;}   /* red transparency */
     #p2a {background-color: #00ff0080;}   /* green transparency */
-    #p3a {background-color: #0000ff80;}   /* blue transparency */</code>
+    #p3a {background-color: #0000ff80;}   /* blue transparency */</code></pre>
         <li>RGB colors</li>
         <p>An RGB color value is specified with the rgb() function, which has the following syntax:</p>
 
@@ -73,6 +73,9 @@
     <p>For example, the rgb(0,0,255) value is rendered as blue, because the blue parameter is set to its highest value (255) and the others are set to 0.</p>
 
     <p>Also, the following values define equal color: rgb(0,0,255) and rgb(0%,0%,100%).</p>
+    <pre class="code"><code>#p1 {background-color: rgb(255, 0, 0);}   /* red */
+#p2 {background-color: rgb(0, 255, 0);}   /* green */
+#p3 {background-color: rgb(0, 0, 255);}   /* blue */</code></pre>
         <li>RGBA colors</li>
         <p>RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity of the object.</p>
 
@@ -81,6 +84,9 @@
     <p>rgba(red, green, blue, alpha)</p>
 
     <p>The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+    <pre class="code"><code>#p1 {background-color: rgba(255, 0, 0, 0.3);}   /* red with opacity */
+#p2 {background-color: rgba(0, 255, 0, 0.3);}   /* green with opacity */
+#p3 {background-color: rgba(0, 0, 255, 0.3);}   /* blue with opacity */</code></pre>
         <li>HSL colors</li>
         <p>HSL stands for hue, saturation, and lightness - and represents a cylindrical-coordinate representation of colors.</p>
 
@@ -89,6 +95,10 @@
     <p>hsl(hue, saturation, lightness)</p>
 
     <p>Hue is a degree on the color wheel (from 0 to 360) - 0 (or 360) is red, 120 is green, 240 is blue. Saturation is a percentage value; 0% means a shade of gray and 100% is the full color. Lightness is also a percentage; 0% is black, 100% is white.</p>
+    <pre class="code"><code>#p1 {background-color: hsl(120, 100%, 50%);}   /* green */
+#p2 {background-color: hsl(120, 100%, 75%);}   /* light green */
+#p3 {background-color: hsl(120, 100%, 25%);}   /* dark green */
+#p4 {background-color: hsl(120, 60%, 70%);}    /* pastel green */</code></pre>
         <li>HSLA colors</li>
         <p>HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity of the object.</p>
 
@@ -97,8 +107,16 @@
     <p>hsla(hue, saturation, lightness, alpha)</p>
 
     <p>The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+    <pre class="code"><code>#p1 {background-color: hsla(120, 100%, 50%, 0.3);}   /* green with opacity */
+#p2 {background-color: hsla(120, 100%, 75%, 0.3);}   /* light green with opacity */
+#p3 {background-color: hsla(120, 100%, 25%, 0.3);}   /* dark green with opacity */
+#p4 {background-color: hsla(120, 60%, 70%, 0.3);}    /* pastel green with opacity */</code></pre>
         <li>Predefined/Cross-browser color names</li>
         <p>140 color names are predefined in the HTML and CSS color specification.</p>
+        <pre class="code"><code>#p1 {background-color: blue;}
+#p2 {background-color: red;}
+#p3 {background-color: coral;}
+#p4 {background-color: brown;}</code></pre>
 
     <p>For example: blue, red, coral, brown, etc.</p>
         </ul>
@@ -125,7 +143,7 @@
         </ul>
     </section>
     </main>
-    <footer>
+   <footer>
     Some documentation in this page is taken from
     <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank"> MDN</a>
     </footer>
