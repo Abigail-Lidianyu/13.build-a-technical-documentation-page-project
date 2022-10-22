@@ -1,4 +1,10 @@
-body {
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  .body {
     font-family: sans-serif;
     color: #0a0a23;
     background-color:#eeeeee
@@ -78,22 +84,26 @@ body {
   
   @media only screen and (max-width: 450px) {
     #navbar {
-      position: flow;
+      position: absolute;
       width: 100%;
-      max-height: 270px;
+      max-height: 300px;
       border-bottom: 2px solid #a8a8a8;
     }
     #main-doc {
-      overflow:hidden;
       margin-left: 0px;
-      margin-top: 270px;
+      margin-top: 300px;
     }
     #contents{
       padding-bottom:10px;
     }
-    footer{
-    padding-bottom:10px;
-    text-align:center;
-    }
   }
   
+  #reference a{
+    color:unset;
+    text-decoration: none;
+    color: #356eaf;
+    cursor:pointer;
+  }
+  #reference a:hover{
+    text-decoration:underline;
+  }
